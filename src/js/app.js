@@ -52,9 +52,17 @@ App.NeuwiedController = Em.Controller.extend({
 
 // Views:
 
+App.ApplicationView = Em.View.extend({
+
+  didInsertElement: function() {
+    this.$().css({ opacity: 0.0, top: '-20px' }).velocity({ opacity: 1.0, top: '0px' }, { duration: 500 });
+  }
+
+});
+
 App.KoblenzView = Em.View.extend({
 
-  classNames: ['koblenz'],
+  classNames: ['city'],
 
   didInsertElement: function() {
     this.$().css({ opacity: 0.0, left: '-20px' }).velocity({ opacity: 1.0, left: '0px' }, { duration: 500 });
@@ -64,7 +72,7 @@ App.KoblenzView = Em.View.extend({
 
 App.NeuwiedView = Em.View.extend({
 
-  classNames: ['neuwied'],
+  classNames: ['city'],
 
   didInsertElement: function() {
     this.$().css({ opacity: 0.0, left: '20px' }).velocity({ opacity: 1.0, left: '0px' }, { duration: 500 });

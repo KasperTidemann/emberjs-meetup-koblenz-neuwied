@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Ember.js Meetup - Koblenz and Neuwied</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" href="gfx/favicon.png">
+    <link rel="stylesheet" href="css/app.css">
+
+  </head>
+
+  <body>
+
+    <script src="js/moment.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/velocity.js"></script>
+    <script src="js/handlebars.js"></script>
+    <script src="js/ember.js"></script>
+    <script src="js/app.js"></script>
+
+    <script type="text/x-handlebars">
+
+      <h1>Ember.js Meetup - Koblenz and Neuwied</h1>
+
+      <p>Where would you like to go?</p>
+
+      <p>{{#link-to 'koblenz'}}Koblenz{{/link-to}} | {{#link-to 'neuwied'}}Neuwied{{/link-to}}</p>
+
+      {{outlet}}
+
+    </script>
+
+    <script type="text/x-handlebars" id="koblenz">
+
+      <p>Welcome to Koblenz!</p>
+
+      <p>Today is {{date}}.</p>
+
+    </script>
+
+    <script type="text/x-handlebars" id="neuwied">
+
+      <p>Welcome to Neuwied!</p>
+
+      <p>The time is {{time}}.</p>
+
+    </script>
+
+  </body>
+
+</html>
